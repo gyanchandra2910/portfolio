@@ -182,3 +182,87 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 });
+
+// Animate sections on scroll
+function animateSections() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {threshold: 0.1});
+
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+}
+
+// Add 3D tilt effect to hero profile photo
+function init3DTiltEffect() {
+    const heroPhoto = document.querySelector('.hero-profile-photo');
+    if (!heroPhoto) return;
+    
+    const maxTilt = 10;
+    
+    heroPhoto.addEventListener('mousemove', (e) => {
+        const rect = heroPhoto.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const xPercent = x / rect.width;
+        const yPercent = y / rect.height;
+        
+        const xRotation = (xPercent - 0.5) * maxTilt * -1;
+        const yRotation = (yPercent - 0.5) * maxTilt;
+        
+        const img = heroPhoto.querySelector('img');
+        if (img) {
+            img.style.transform = `perspective(1000px) rotateX(${yRotation}deg) rotateY(${xRotation}deg) scale3d(1.05, 1.05, 1.05)`;
+        }
+    });
+    
+    heroPhoto.addEventListener('mouseleave', () => {
+        const img = heroPhoto.querySelector('img');
+        if (img) {
+            img.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+        }
+    });
+}
+
+// Simple parallax scrolling effect
+function initParallaxEffect() {
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        
+        // Hero section parallax
+        const heroSection = document.querySelector('.hero');
+        if (heroSection) {
+            const heroImg = heroSection.querySelector('.hero-profile-photo img');
+            if (heroImg) {
+                heroImg.style.transform = `translateY(${scrollY * 0.15}px)`;
+            }
+            
+            const heroContent = heroSection.querySelector('.text-content');
+            if (heroContent) {
+                heroContent.style.transform = `translateY(${scrollY * 0.1}px)`;
+            }
+        }
+        
+        // About section parallax
+        const aboutSection = document.querySelector('.about');
+        if (aboutSection && scrollY > aboutSection.offsetTop - 500) {
+            const aboutImg = aboutSection.querySelector('.about-image');
+            if (aboutImg) {
+                aboutImg.style.transform = `translateY(${(scrollY - aboutSection.offsetTop + 500) * 0.05}px)`;
+            }
+        }
+    });
+}
+
+// Initialize animations once the page is loaded
+window.addEventListener('DOMContentLoaded', () => {
+    animateSections();
+    init3DTiltEffect();
+    initParallaxEffect();
+});
