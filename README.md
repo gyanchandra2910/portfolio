@@ -14,7 +14,8 @@
 🏫 IIITDM Kancheepuram  
 📫 Email: cs23i1053@iiitdm.ac.in  
 🔗 LinkedIn: [Gyan Chandra](https://www.linkedin.com/in/gyanchandra29102003)  
-🌐 GitHub: [gyanchandra2910](https://github.com/gyanchandra2910)
+💻 GitHub: [gyanchandra2910](https://github.com/gyanchandra2910)
+🌐 Portfolio: [gyanchandra2910](https://gyanchandra2910.github.io/portfolio/)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0077B5)](https://www.linkedin.com/in/gyanchandra29102003)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=100000)](https://github.com/gyanchandra2910)
