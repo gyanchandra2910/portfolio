@@ -6,8 +6,6 @@
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F7D433&width=435&lines=Welcome+to+my+GitHub+Profile!;Building+innovative+solutions;Passionate+about+technology;Always+learning+new+skills" alt="Typing SVG" /></a>
 
-**"Jeet teri jidd hai, haar mera shauk."**
-
 <img src="https://user-images.githubusercontent.com/74038190/212750147-854a394f-fee9-4080-9770-78a4b7ece53f.gif" width="300" alt="handshake" />
 
 🎓 B.Tech + M.Tech Dual Degree | Computer Science & Engineering  
